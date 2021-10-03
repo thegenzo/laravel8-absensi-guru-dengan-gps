@@ -1,4 +1,6 @@
-<p align="center">Absensi Guru Menggunakan GPS dengan Laravel 8</p>
+<p align="center">
+   <h1>Absensi Guru Menggunakan GPS dengan Laravel 8</h1>
+</p>
 
 ## Cara Menggunakan
 - Masuk ke direktori folder lewat terminal
