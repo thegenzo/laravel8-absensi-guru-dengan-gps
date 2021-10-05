@@ -148,7 +148,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">Data absen kosong.</td>
+                                        <td colspan="5" class="text-center">Data absen kosong.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>
@@ -211,7 +211,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="4" class="text-center">Data absen kosong.</td>
+                                        <td colspan="5" class="text-center">Data absen kosong.</td>
                                     </tr>
                                     @endforelse
                                 </tbody>
