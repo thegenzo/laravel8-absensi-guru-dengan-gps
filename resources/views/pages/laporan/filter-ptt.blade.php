@@ -40,6 +40,7 @@
                                 <div class="col-md-12 mt-2">
                                     <a href="" onclick="this.href='/filter-pns/'+ document.getElementById('tglawal').value +
                                     '/' + document.getElementById('tglakhir').value " class="btn btn-info">Lihat <i class="fas fa-print"></i></a>
+                                    <a href="/cetak-ptt/{{ $data1 }}/{{ $data2 }}" class="btn btn-danger">Cetak PDF <i class="fas fa-file-pdf"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@
                                     </tr>
                                     @empty
                                     <tr>
-                                        <td colspan="6" class="text-center">Data Kosong</td>
+                                        <td colspan="7" class="text-center">Data Kosong</td>
                                     </tr>
                                     @endforelse
                                 </tbody>

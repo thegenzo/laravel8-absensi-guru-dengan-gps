@@ -57,9 +57,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:admin,kepsek']], function() {
 
     Route::get('/laporan-absensi-pns', [LaporanAbsenController::class, 'laporanPNS']);
     Route::get('/filter-pns/{tglawal}/{tglakhir}', [LaporanAbsenController::class, 'filterPNS']);
+    Route::get('/cetak-pns/{data1}/{data2}', [LaporanAbsenController::class, 'cetakPNS']);
 
     Route::get('laporan-absensi-ptt', [LaporanAbsenController::class, 'laporanPTT']);
     Route::get('/filter-ptt/{tglawal}/{tglakhir}', [LaporanAbsenController::class, 'filterPTT']);
+    Route::get('/cetak-ptt/{data1}/{data2}', [LaporanAbsenController::class, 'cetakPTT']);
 
     Route::get('lokasi-sekolah', [KoordinatSekolahController::class, 'index']);
     Route::post('ubah-koordinat', [KoordinatSekolahController::class, 'update']);
