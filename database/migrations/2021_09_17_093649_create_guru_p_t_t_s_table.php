@@ -17,7 +17,8 @@ class CreateGuruPTTSTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->string('nip')->unique();
+            $table->string('nuptk')->unique()->nullable(); //Nomor Unik Pendidik dan Tenaga Kependidikan
+            $table->string('nik')->unique()->nullable();
             $table->string('no_hp');
             $table->text('alamat');
             $table->timestamps();

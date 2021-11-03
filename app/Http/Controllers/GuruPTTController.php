@@ -44,13 +44,14 @@ class GuruPTTController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'name'                  => 'required',
-            'password'              => 'required|min:8|same:konfirmasi_password',
-            'konfirmasi_password'   => 'required|min:8',
-            'email'                 => 'required|email|unique:users',
-            'nip'                   => 'required|numeric|unique:guru_p_t_t_s',
-            'no_hp'                 => 'required|numeric',
-            'alamat'                => 'required'
+            'name'                    => 'required',
+            'password'                => 'required|min:8|same:konfirmasi_password',
+            'konfirmasi_password'     => 'required|min:8',
+            'email'                   => 'required|email|unique:users',
+            'nuptk'                   => 'required|numeric|unique:guru_p_t_t_s',
+            'nik'                     => 'required|numeric|unique:guru_p_t_t_s',
+            'no_hp'                   => 'required|numeric',
+            'alamat'                  => 'required'
         ];
 
 
@@ -64,8 +65,10 @@ class GuruPTTController extends Controller
             'email.required'                => 'Email wajib diisi',
             'email.email'                   => 'Email tidak valid',
             'email.unique'                  => 'Email sudah terdaftar',
-            'nip.required'                  => 'NIP wajib diisi',
-            'nip.unique'                    => 'NIP sudah terdaftar',
+            'nuptk.required'                => 'NUPTK wajib diisi',
+            'nuptk.unique'                  => 'NUPTK sudah terdaftar',
+            'nik.required'                  => 'NIK wajib diisi',
+            'nik.unique'                    => 'NIK sudah terdaftar',
             'no_hp.required'                => 'Nomor handphone wajib diisi',
             'no_hp.numeric'                 => 'Nomor handphone harus berupa angka',
             'alamat.required'               => 'Alamat wajib diisi'
@@ -127,14 +130,14 @@ class GuruPTTController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $guru_ptt = GuruPTT::find($id);
-
         $rules = [
             'name'                  => 'required',
             'password'              => 'required|min:8|same:konfirmasi_password',
             'konfirmasi_password'   => 'required|min:8',
             'email'                 => 'required|email|',Rule::unique('users')->ignore($id),
             'nip'                   => 'required|numeric|',Rule::unique('guru_p_t_t_s')->ignore($id),
+            'nuptk'                 => 'required|numeric|',Rule::unique('guru_p_t_t_s')->ignore($id),
+            'nik'                   => 'required|numeric|',Rule::unique('guru_p_t_t_s')->ignore($id),
             'no_hp'                 => 'required|numeric',
             'alamat'                => 'required'
         ];
@@ -150,9 +153,10 @@ class GuruPTTController extends Controller
             'email.required'                => 'Email wajib diisi',
             'email.email'                   => 'Email tidak valid',
             'email.unique'                  => 'Email sudah terdaftar',
-            'nip.required'                  => 'NIP wajib diisi',
-            'nip.numeric'                   => 'NIP harus berupa angka',
-            'nip.unique'                    => 'NIP sudah terdaftar',
+            'nuptk.required'                => 'NUPTK wajib diisi',
+            'nuptk.unique'                  => 'NUPTK sudah terdaftar',
+            'nik.required'                  => 'NIK wajib diisi',
+            'nik.unique'                    => 'NIK sudah terdaftar',
             'no_hp.required'                => 'Nomor handphone wajib diisi',
             'no_hp.numeric'                 => 'Nomor handphone harus berupa angka',
             'alamat.required'               => 'Alamat wajib diisi'
@@ -164,8 +168,9 @@ class GuruPTTController extends Controller
             return redirect()->back()->withErrors($validator)->withInput($request->all());
         }
 
-        
-        $guru_ptt->nip = $request->nip;
+        $guru_ptt = GuruPTT::find($id);
+        $guru_ptt->nuptk = $request->nuptk;
+        $guru_ptt->nik = $request->nik;
         $guru_ptt->no_hp = $request->no_hp;
         $guru_ptt->alamat = $request->alamat;
         $guru_ptt->save();

@@ -21,7 +21,8 @@
                                     <thead>
                                         <th class="text-center">No</th>
                                         <th>Nama</th>
-                                        <th class="text-center">NIP</th>
+                                        <th class="text-center">NUPTK</th>
+                                        <th class="text-center">NIK</th>
                                         <th>Alamat</th>
                                         <th>Nomor Handphone</th>
                                         <th class="text-center">Action</th>
@@ -31,7 +32,8 @@
                                         <tr>
                                             <td class="text-center">{{ $loop->iteration }}</td>
                                             <td>{{ $data->user->name }}</td>
-                                            <td class="text-center">{{ $data->nip }}</td>
+                                            <td class="text-center">{{ $data->nuptk }}</td>
+                                            <td class="text-center">{{ $data->nik }}</td>
                                             <td>{{ $data->alamat }}</td>
                                             <td>{{ $data->no_hp }}</td>
                                             <td class="text-center">

@@ -50,8 +50,12 @@
                                     <input type="text" class="form-control" id="name" name="name" value="{{ $guru_ptt->user->name }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">NIP</label>
-                                    <input type="text" class="form-control" id="nip" name="nip" value="{{ $guru_ptt->nip }}">
+                                    <label for="name">Nomor Unik Pendidik dan Tenaga Kependidikan</label>
+                                    <input type="text" class="form-control" id="nuptk" name="nuptk" value="{{ $guru_ptt->nuptk }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Nomor Induk Keluarga</label>
+                                    <input type="text" class="form-control" id="nik" name="nik" value="{{ $guru_ptt->nik }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nomor Handphone</label>

@@ -24,7 +24,8 @@ class GuruPTTSeeder extends Seeder
 
         $ptt = new GuruPTT;
         $ptt->id_user = $user->id;
-        $ptt->nip = '7573077894450009';
+        $ptt->nuptk = '7573077894450009';
+        $ptt->nik = '747123912032013';
         $ptt->alamat = 'Pimpi';
         $ptt->no_hp = '085756219908';
         $ptt->save();

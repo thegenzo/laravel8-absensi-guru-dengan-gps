@@ -48,8 +48,12 @@
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan Nama">
                                 </div>
                                 <div class="form-group">
-                                    <label for="name">NIP</label>
-                                    <input type="text" class="form-control" id="nip" name="nip" placeholder="Masukkan NIP">
+                                    <label for="name">Nomor Unik Pendidik dan Tenaga Kependidikan</label>
+                                    <input type="text" class="form-control" id="nuptk" name="nuptk" placeholder="Masukkan NUPTK">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Nomor Induk Keluarga</label>
+                                    <input type="text" class="form-control" id="nik" name="nik" placeholder="Masukkan NIK">
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Nomor Handphone</label>

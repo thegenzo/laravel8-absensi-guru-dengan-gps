@@ -11,7 +11,7 @@ class GuruPTT extends Model
 
     protected $table = 'guru_p_t_t_s';
 
-    protected $fillable = ['id_user', 'nip', 'no_hp', 'alamat'];
+    protected $fillable = ['id_user', 'nuptk', 'nik', 'no_hp', 'alamat'];
 
     public function user()
     {
